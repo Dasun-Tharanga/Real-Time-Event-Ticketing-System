@@ -6,7 +6,8 @@ import { MatCardModule } from '@angular/material/card';
 const MaterialComponent = [
   MatButtonModule,
   MatIconModule,
-  MatCardModule
+  MatCardModule,
+
 ];
 
 @NgModule({
