@@ -1,0 +1,8 @@
+button {
+    margin: 3rem;
+}
+
+.incrementors {
+    color: grey;
+    transform: scale(2);
+}
