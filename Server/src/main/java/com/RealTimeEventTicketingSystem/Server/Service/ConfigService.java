@@ -1,6 +1,6 @@
 package com.RealTimeEventTicketingSystem.Server.Service;
 
-import com.RealTimeEventTicketingSystem.Server.ConfigRepository;
+import com.RealTimeEventTicketingSystem.Server.Config.ConfigRepository;
 import com.RealTimeEventTicketingSystem.Server.Model.Config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,5 +1,6 @@
 package com.RealTimeEventTicketingSystem.Server.Model;
 
+import com.RealTimeEventTicketingSystem.Server.Config.TicketWebSocketHandler;
 import com.RealTimeEventTicketingSystem.Server.Service.ConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,13 +14,15 @@ import java.util.List;
 public class TicketPool {
 
     private final List<String> ticketPool ;
+    private final TicketWebSocketHandler ticketWebSocketHandler;
     private int totalTickets ;
     private int soldTickets = 0;
 
     @Autowired
-    public TicketPool(ConfigService configService) {
+    public TicketPool(ConfigService configService, TicketWebSocketHandler ticketWebSocketHandler) {
         this.ticketPool = Collections.synchronizedList(new ArrayList<>());
         this.totalTickets = configService.getConfig().getTotalTickets();
+        this.ticketWebSocketHandler = ticketWebSocketHandler;
 
     }
 
@@ -32,6 +35,7 @@ public class TicketPool {
         }
         for (int i = 0; i < ticketCount; i++) {
             ticketPool.add("Ticket");
+            ticketWebSocketHandler.broadcastTicketCount(getAvailableTickets());
         }
 
         System.out.println("Tickets added to the pool: " + ticketCount);
@@ -47,6 +51,8 @@ public class TicketPool {
 
         for (int i = 0; i < ticketCount; i++) {
             ticketPool.remove("Ticket");
+            ticketWebSocketHandler.broadcastTicketCount(getAvailableTickets());
+
         }
         System.out.println("Ticket removed from the pool: " + ticketCount);
 

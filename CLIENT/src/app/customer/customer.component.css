@@ -1,8 +1,59 @@
 button {
-    margin: 3rem;
+    margin: 4rem;
+    font-size: xx-large;
+    transform: scale(1.5);
+}
+
+span {
+    font-size: xxx-large;
+}
+
+
+mat-card {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+mat-card-content {
+    display: inline;
+    text-align: center;
+}
+
+
+mat-card-actions {
+    justify-content: end;
 }
 
 .incrementors {
     color: grey;
-    transform: scale(2);
+    width: 5rem;
+
+}
+
+.avatar-tile {
+    display: flex;
+    flex-direction: row;
+
+    align-content: center;
+}
+
+.avatar {
+    background-image: url('/assets/Avatar-png.png');
+    background-size: contain;
+    width: 10rem;
+    height: 10rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-content: start;
+
+    margin-bottom: 2rem;
+}
+
+.tab-heading {
+    justify-content: left;
 }

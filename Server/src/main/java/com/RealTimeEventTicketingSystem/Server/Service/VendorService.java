@@ -11,6 +11,7 @@ public class VendorService {
     private final TicketPool ticketPool;
     private final ConfigService configService;
 
+
     @Autowired
     public VendorService(TicketPool ticketPool, ConfigService configService) {
         this.ticketPool = ticketPool;

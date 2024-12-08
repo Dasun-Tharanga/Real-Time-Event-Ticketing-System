@@ -1,21 +1,85 @@
-<button mat-raised-button> Click me!</button>
-<button mat-flat-button> Click me!</button>
-<button mat-flat-button> Click me!</button>
-<button mat-icon-button>Icon</button>
-<button mat-fab>Icon</button>
-<div>
-    <button color="primary" mat-raised-button> Click me!</button>
-    <button color="accent" mat-raised-button> Click me!</button>
-    <button color="warn" mat-raised-button> Click me!</button>
-</div>
 
-<section>
-    <mat-card class="ticket-add-card">
-        <button mat-fab aria-label="Plus icon"><mat-icon  class="incrementors">remove</mat-icon></button> 
-        <mat-card-content>00</mat-card-content>
-        <button mat-fab aria-label="Plus icon"><mat-icon  class="incrementors">add</mat-icon></button>
-    </mat-card>
-    <div>
-        <button mat-fab extended>Buy</button>
-    </div>
-</section>
+<mat-tab-group>
+    <mat-tab  label="Buy Tickets">
+            <mat-grid-list cols="1" rowHeight="2:1">
+                <mat-grid-tile>
+                    <mat-card class="add-tickets" appearance="outlined">
+                        <mat-card-content>
+                            <button mat-fab aria-label="Plus icon"><mat-icon  class="incrementors">remove</mat-icon></button>
+                            <span>00</span>
+                            <button mat-fab aria-label="Plus icon"><mat-icon  class="incrementors">add</mat-icon></button>
+                        </mat-card-content>
+                    
+                        <mat-card-actions>
+                            <button mat-fab extended class="buy-button">Buy</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-grid-tile>
+            </mat-grid-list>
+
+
+    </mat-tab>
+
+    <mat-tab label="My Tickets">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ticket-ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </mat-tab>
+
+
+    <mat-tab label="Profile">
+
+        <div class="container ">
+
+            <div class="row tab-heading"><h1>Profile</h1></div>
+
+            <div class="row">
+                <div class="col">
+                    <h4>Profile Picture</h4>
+                    <div class="avatar"></div>
+                    
+                </div>
+                                              
+                <div class="col">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name-input">Name: </label>
+                            <input type="text" class="form-control" name="name-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="name-input">E-mail: </label>
+                            <input type="text" class="form-control" name="name-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="name-input">Password: </label>
+                            <input type="text" class="form-control" name="name-input">
+                        </div>
+                        <div class="form-group">
+                            <label for="name-input">Repeat Password: </label>
+                            <input type="text" class="form-control" name="name-input">
+                        </div>
+                    </form>
+                </div>
+                            
+            </div>
+
+
+        </div>        
+    
+
+
+    </mat-tab>
+</mat-tab-group>
+
+

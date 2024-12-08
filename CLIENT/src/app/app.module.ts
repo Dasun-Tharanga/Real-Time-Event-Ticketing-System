@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MaterialModule } from './material/material.module';
 import { CustomerComponent } from './customer/customer.component';
+import { VendorComponent } from './vendor/vendor.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomerComponent
+    CustomerComponent,
+    VendorComponent
   ],
   imports: [
     BrowserModule,
