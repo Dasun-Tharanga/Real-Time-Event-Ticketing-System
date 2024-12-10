@@ -13,6 +13,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 
 
 
@@ -25,6 +26,7 @@ import { FormsModule } from '@angular/forms';
     TicketDisplayComponent,
     SignInComponent,
     SignUpComponent,
+    NavBarComponent,
 
   ],
   imports: [

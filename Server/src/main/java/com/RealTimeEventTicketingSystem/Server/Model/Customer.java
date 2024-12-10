@@ -10,6 +10,7 @@ public class Customer implements Runnable {
     private final int customerRetrievalRate;
     private  int purchasingTicketCount;
 
+
     public Customer(String customerID, int purchasingTicketCount ,TicketPool ticketPool, int customerRetrievalRate) {
         this.customerID = customerID;
         this.purchasingTicketCount = purchasingTicketCount;

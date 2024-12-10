@@ -34,7 +34,7 @@ export class CustomerComponent {
       this.ticketService.buyTickets(this.ticketCout, this.customerId)
         .subscribe({
           next: (response) => { alert(response); this.ticketCout = 0 },
-          error: (error) => { alert('Failed to buy tickets. Please try again.'); }
+          error: (error) => { alert('Failed to buy tickets. Please try again.'); console.log(error); }
         })
     } else {
       alert('Please select at least one ticket.')

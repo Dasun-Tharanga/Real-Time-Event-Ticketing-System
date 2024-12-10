@@ -1,5 +1,9 @@
 package com.RealTimeEventTicketingSystem.Server.Config;
 
+import com.RealTimeEventTicketingSystem.Server.Model.TicketPool;
+import com.RealTimeEventTicketingSystem.Server.Service.TicketService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;
 import org.springframework.web.socket.CloseStatus;
 import org.springframework.web.socket.TextMessage;
@@ -13,6 +17,10 @@ import java.util.logging.Logger;
 @Component
 public class TicketWebSocketHandler implements org.springframework.web.socket.WebSocketHandler {
 
+    @Autowired
+    @Lazy //lazy annotation is used to  only inject the dependency when the dependency accessed
+    private TicketPool ticketPool;
+
     private final CopyOnWriteArrayList<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
 
     Logger logger = Logger.getLogger(TicketWebSocketHandler.class.getName());
@@ -21,6 +29,7 @@ public class TicketWebSocketHandler implements org.springframework.web.socket.We
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
         sessions.add(session);
         logger.info("WebSocket connection established with sessionId " + session.getId());
+        sendTicketCountToSession(session);
     }
 
     @Override
@@ -42,6 +51,12 @@ public class TicketWebSocketHandler implements org.springframework.web.socket.We
     @Override
     public boolean supportsPartialMessages() {
         return false;
+    }
+
+    private void sendTicketCountToSession(WebSocketSession session) throws IOException {
+
+        int ticketCount = this.ticketPool.getAvailableTickets();
+        broadcastTicketCount(ticketCount);
     }
 
     public void broadcastTicketCount(int ticketCount) {

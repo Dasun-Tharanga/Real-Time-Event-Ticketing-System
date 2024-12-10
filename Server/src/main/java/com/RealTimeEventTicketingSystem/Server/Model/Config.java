@@ -30,18 +30,22 @@ public class Config {
     }
 
     public void setTicketReleaseRate(int ticketReleaseRate) {
+
         this.ticketReleaseRate = ticketReleaseRate;
     }
 
     public void setCustomerRetrievalRate(int customerRetrievalRate) {
+
         this.customerRetrievalRate = customerRetrievalRate;
     }
 
     public void setTotalTickets(int totalTickets) {
+
         this.totalTickets = totalTickets;
     }
 
     public void setMaximumTickets(int maximumTickets) {
+
         this.maximumTickets = maximumTickets;
     }
 }
