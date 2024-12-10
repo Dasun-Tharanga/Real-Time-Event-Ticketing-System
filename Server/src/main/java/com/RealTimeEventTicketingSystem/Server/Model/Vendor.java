@@ -6,6 +6,7 @@ public class Vendor implements Runnable {
     private final TicketPool ticketPool;
     private final int ticketReleaseRate;
     private final int totalTicketsToRelease;
+    private volatile boolean running = true;
 
 
     public Vendor(String vendorID, TicketPool ticketPool, int ticketReleaseRate, int totalTicketsToRelease) {
@@ -31,7 +32,7 @@ public class Vendor implements Runnable {
 
                     ticketsReleased += ticketsToReleaseNow;
 
-                    Thread.sleep(500);
+                    Thread.sleep(2000);
                     // In this block of code, in each second the vendor adds "ticketReleaseRate" number of tickets to the pool.
 
                 }else break;
@@ -45,5 +46,9 @@ public class Vendor implements Runnable {
             }
         }
         System.out.println("Vendor " + vendorID + " added " + ticketsReleased + " tickets to the pool.");
+    }
+
+    public void stop() {
+        this.running = false;
     }
 }

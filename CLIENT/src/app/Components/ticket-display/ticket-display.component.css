@@ -1,0 +1,11 @@
+.ticket-counter {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.ticket-count {
+    font-size: 3rem;
+
+    margin: 1rem 2rem 1rem 2rem;
+}
