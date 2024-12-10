@@ -23,7 +23,7 @@ public class Vendor implements Runnable {
 
         int ticketsReleased = 0;
 
-        while (ticketsReleased < totalTicketsToRelease) {
+        while (running && ticketsReleased < totalTicketsToRelease) {
 
             try {
                 int ticketsToReleaseNow = Math.min(ticketReleaseRate, totalTicketsToRelease - ticketsReleased);
