@@ -42,7 +42,7 @@ public class ConfigService {
         ObjectMapper objectMapper = new ObjectMapper();
 
         try{
-            objectMapper.writeValue(new File("config.json"), config);
+            objectMapper.writeValue(new File("../Files/configuration.json"), config);
             logger.info("Ticket configuration saved to the JSON file");
         }catch(IOException e){
             throw new RuntimeException("Error writing config to JSON file", e);
