@@ -14,6 +14,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
+import { LogDisplayComponent } from './Components/log-display/log-display.component';
+import { AdminSingInComponent } from './Components/admin-sing-in/admin-sing-in.component';
 
 
 
@@ -27,6 +29,8 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
     SignInComponent,
     SignUpComponent,
     NavBarComponent,
+    LogDisplayComponent,
+    AdminSingInComponent,
 
   ],
   imports: [

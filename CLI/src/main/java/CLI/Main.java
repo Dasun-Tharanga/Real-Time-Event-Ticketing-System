@@ -9,7 +9,7 @@ public class Main {
         int totalTickets = 0;
         int ticketReleaseRate = 0;
         int customerRetrievalRate = 0;
-        int maxTicketCapacity = 0;
+        int maximumTickets = 0;
 
 
         Scanner sc = new Scanner(System.in);
@@ -64,17 +64,17 @@ public class Main {
 
         while (true) {
 
-            System.out.print("Enter the Maximum Ticket Capacity");
+            System.out.print("Enter the Maximum Ticket Capacity: ");
             try {
-                maxTicketCapacity = Integer.parseInt(sc.nextLine());
+                maximumTickets = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException e) {
                 System.out.print("Enter a valid number");
                 continue;
             }
-            if (0 >= maxTicketCapacity) {
+            if (0 >= maximumTickets) {
                 System.out.println("Max Ticket Capacity cannot be less than 0");
                 continue;
-            } else if (maxTicketCapacity < totalTickets) {
+            } else if (maximumTickets < totalTickets) {
                 System.out.println("Max Ticket Capacity cannot be less than total tickets");
                 continue;
             }
@@ -85,10 +85,10 @@ public class Main {
         System.out.println("Total Tickets: " + totalTickets);
         System.out.println("Ticket Release Rate: " + ticketReleaseRate);
         System.out.println("Customer Retrieval Rate: " + customerRetrievalRate);
-        System.out.println("Total Tickets: " + maxTicketCapacity);
+        System.out.println("Total Tickets: " + maximumTickets);
         System.out.println();
 
-        Configuration configuration = new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maxTicketCapacity);
+        Configuration configuration = new Configuration(totalTickets, ticketReleaseRate, customerRetrievalRate, maximumTickets);
         configuration.saveConfiguration("../Files/configuration.json");
     }
 }

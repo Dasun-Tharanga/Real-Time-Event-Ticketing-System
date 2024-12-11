@@ -1,6 +1,5 @@
 package com.RealTimeEventTicketingSystem.Server.Config;
 
-import com.RealTimeEventTicketingSystem.Server.Model.TicketPool;
 import com.RealTimeEventTicketingSystem.Server.Service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
@@ -19,7 +18,7 @@ public class TicketWebSocketHandler implements org.springframework.web.socket.We
 
     @Autowired
     @Lazy //lazy annotation is used to  only inject the dependency when the dependency accessed
-    private TicketPool ticketPool;
+    private TicketService ticketService;
 
     private final CopyOnWriteArrayList<WebSocketSession> sessions = new CopyOnWriteArrayList<>();
 
@@ -55,7 +54,7 @@ public class TicketWebSocketHandler implements org.springframework.web.socket.We
 
     private void sendTicketCountToSession(WebSocketSession session) throws IOException {
 
-        int ticketCount = this.ticketPool.getAvailableTickets();
+        int ticketCount = this.ticketService.getAvailableTickets();
         broadcastTicketCount(ticketCount);
     }
 

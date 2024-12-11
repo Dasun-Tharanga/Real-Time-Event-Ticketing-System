@@ -49,4 +49,18 @@ public class ConfigService {
 
         }
     }
+
+    // Reading configuration dara from JSON file
+    public Config loadConfig(){
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try{
+            Config config = objectMapper.readValue(new File("../Files/configuration.json"), Config.class);
+            logger.info("Ticket configuration loaded from the JSON file");
+            return config;
+
+        } catch (IOException e) {
+            throw new RuntimeException("Error writing config to JSON file", e);
+        }
+    }
 }

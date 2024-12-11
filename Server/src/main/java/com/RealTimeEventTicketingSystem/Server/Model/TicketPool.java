@@ -21,7 +21,7 @@ public class TicketPool {
     @Autowired
     public TicketPool(ConfigService configService, TicketWebSocketHandler ticketWebSocketHandler) {
         this.ticketPool = Collections.synchronizedList(new ArrayList<>());
-        this.totalTickets = configService.getConfig().getTotalTickets();
+        this.totalTickets = configService.loadConfig().getTotalTickets();
         this.ticketWebSocketHandler = ticketWebSocketHandler;
 
     }

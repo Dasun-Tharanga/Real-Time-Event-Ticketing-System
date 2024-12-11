@@ -12,30 +12,24 @@ import java.util.logging.Logger;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
-@RequestMapping("/authentication")
-public class UserController {
+@RequestMapping("/adminAuthentication")
+public class VendorController {
 
     Logger logger = Logger.getLogger(TicketWebSocketHandler.class.getName());
 
     @Autowired
-    private UserRepository userRepository;
+    private AdminRepository adminRepository;
 
 
-
-    @PostMapping("/register")
-    public void register(@RequestBody User user) {
-         userRepository.save(user);
-         logger.info("User registered: " + user.toString());
-    }
-    // need to make sure that the same username can't be added twice
 
     @PostMapping("/login")
     public boolean login(@RequestParam String username, @RequestParam String password) {
+        System.out.println(username + " " + password);
+        Admin admin = adminRepository.findByUsername(username);
+        System.out.println(admin.toString());
 
-        User user = userRepository.findByUsername(username);
-
-        if (user != null && user.getPassword().equals(password)) {
-            logger.info("User logged in: " + user.toString());
+        if (admin != null && admin.getPassword().equals(password)) {
+            logger.info("User logged in: " + admin.toString());
             return true;
 
 
@@ -44,7 +38,4 @@ public class UserController {
             return false;
         }
     }
-
-
-
 }

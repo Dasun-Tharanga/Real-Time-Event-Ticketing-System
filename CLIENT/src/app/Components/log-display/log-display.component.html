@@ -1,0 +1,11 @@
+<div>
+  <h2>Logs</h2>
+  <div *ngFor="let log of logs()">
+    <strong>{{ log.timestamp }}</strong>: {{ log.message }}
+  </div>
+  <div class="">
+    <button class="btn btn-info me-5" (click)="addSampleLog()">Add Log</button >
+    <button class="btn btn-info" (click)="clearAllLogs()">Clear Logs</button>
+  </div>
+</div>
+  

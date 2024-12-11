@@ -16,10 +16,9 @@ export class SignInComponent {
   constructor(private authService: AuthService, private router: Router) { }
 
   login(): void {
-    this.authService.login(this.credentials).subscribe({
+    this.authService.login(this.credentials.username, this.credentials.password).subscribe({
       next: (response) => {
-        alert(response);
-        this.router.navigate(['/customer'])
+        if (response) { this.router.navigate(['/customer']) }
       },
       error: (error) => alert('Login failed.' + error.message)
     });

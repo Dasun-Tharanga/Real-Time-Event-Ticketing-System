@@ -20,7 +20,7 @@ public class CustomerService {
     }
 
     public void purchaseTickets(String customerID, int ticketCount) {
-        int customerRetrievalRate = configService.getConfig().getCustomerRetrievalRate();
+        int customerRetrievalRate = configService.loadConfig().getCustomerRetrievalRate();
 
         Customer customer = new Customer(customerID, ticketCount ,ticketPool, customerRetrievalRate);
 

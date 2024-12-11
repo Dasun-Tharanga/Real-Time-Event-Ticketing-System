@@ -5,18 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="92771bde-7637-421e-8996-10ec47022568" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CLI/Configuration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CLI/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CLI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/HelloWorldController.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Config/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/VendorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Model/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CLI/Configuration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CLI/Configuration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CLI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CLI/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Files/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Files/configuration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Config/TicketWebSocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Config/TicketWebSocketHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Model/TicketPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Model/TicketPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Service/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Service/ConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Service/VendorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Service/VendorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733858071055</updated>
-      <workItem from="1733858072193" duration="1387000" />
+      <workItem from="1733858072193" duration="2871000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { TicketService } from '../../Services/ticket/ticket.service';
+import { LogService } from '../../Services/log/log.service';
 
 @Component({
   selector: 'app-vendor',
@@ -13,7 +14,7 @@ export class VendorComponent {
   ticketCout: number = 0;
   vendorID: string = 'v1234';
 
-  constructor(private ticketService: TicketService) { }
+  constructor(private ticketService: TicketService, private logService: LogService) { }
 
   increment(): void {
     this.ticketCout++;
@@ -31,7 +32,10 @@ export class VendorComponent {
     if (this.ticketCout > 0) {
       this.ticketService.addTickets(this.ticketCout, this.vendorID)
         .subscribe({
-          next: (response) => { alert(response); this.ticketCout = 0 },
+          next: (response) => {
+            alert(response); this.ticketCout = 0;
+            this.logService.addLog(`Vendor ${this.vendorID} added ${this.ticketCout} tickets to the TicketPool`);
+          },
           error: (error) => { alert('Failed to add tickets. Please try again.'); console.log(error); }
         })
     } else {
@@ -49,6 +53,16 @@ export class VendorComponent {
   }
 
 
+  appLogs = [
+    { timestamp: new Date().toISOString(), message: 'Application started' },
+    { timestamp: new Date().toISOString(), message: 'User logged in' },
+  ];
+
+
+  // Method to add a log messaage
+  addLog(message: string) {
+    this.appLogs.push({ timestamp: new Date().toISOString(), message });
+  }
 
 
 }

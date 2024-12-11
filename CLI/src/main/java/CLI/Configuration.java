@@ -11,13 +11,13 @@ public class Configuration {
     private int totalTickets = 0;
     private int ticketReleaseRate = 0;
     private int customerRetrievalRate = 0;
-    private int maxTicketCapacity = 0;
+    private int maximumTickets = 0;
 
-    public  Configuration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maxTicketCapacity) {
+    public  Configuration(int totalTickets, int ticketReleaseRate, int customerRetrievalRate, int maximumTickets) {
         this.totalTickets = totalTickets;
         this.ticketReleaseRate = ticketReleaseRate;
         this.customerRetrievalRate = customerRetrievalRate;
-        this.maxTicketCapacity = maxTicketCapacity;
+        this.maximumTickets = maximumTickets;
 
     }
 
@@ -34,7 +34,7 @@ public class Configuration {
     }
 
     public int getMaxTicketCapacity() {
-        return maxTicketCapacity;
+        return maximumTickets;
     }
 
     public void setTotalTickets(int totalTickets) {
@@ -49,8 +49,8 @@ public class Configuration {
         this.customerRetrievalRate = customerRetrievalRate;
     }
 
-    public void setMaxTicketCapacity(int maxTicketCapacity) {
-        this.maxTicketCapacity = maxTicketCapacity;
+    public void setMaxTicketCapacity(int maximumTickets) {
+        this.maximumTickets = maximumTickets;
     }
 
     public void saveConfiguration(String filePath){

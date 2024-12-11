@@ -26,7 +26,7 @@ public class VendorService {
     }
 
     public void releaseTickets(String vendorId, int ticketCount) {
-        int ticketReleaseRate = configService.getConfig().getTicketReleaseRate();
+        int ticketReleaseRate = configService.loadConfig().getTicketReleaseRate();
         Vendor vendor = new Vendor(vendorId, ticketPool, ticketReleaseRate, ticketCount );
         activeVendors.put(vendorId, vendor);
 
