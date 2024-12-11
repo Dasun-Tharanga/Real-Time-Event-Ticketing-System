@@ -1,9 +1,7 @@
 package com.RealTimeEventTicketingSystem.Server.Controller;
 
-import com.RealTimeEventTicketingSystem.Server.Config.AdminRepository;
 import com.RealTimeEventTicketingSystem.Server.Config.TicketWebSocketHandler;
 import com.RealTimeEventTicketingSystem.Server.Config.UserRepository;
-import com.RealTimeEventTicketingSystem.Server.Model.Admin;
 import com.RealTimeEventTicketingSystem.Server.Model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,6 +14,8 @@ import java.util.logging.Logger;
 @CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("/authentication")
 public class UserController {
+
+
 
     Logger logger = Logger.getLogger(TicketWebSocketHandler.class.getName());
 
