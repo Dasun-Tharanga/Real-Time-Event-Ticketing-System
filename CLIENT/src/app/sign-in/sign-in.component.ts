@@ -17,10 +17,19 @@ export class SignInComponent {
 
   login(): void {
     this.authService.login(this.credentials.username, this.credentials.password).subscribe({
-      next: (response) => {
-        if (response) { this.router.navigate(['/customer']) }
+      next: (response: any) => {
+        if (response.status === 200) {
+          alert(response.body);
+          this.router.navigate(['/customer'])
+        }
       },
-      error: (error) => alert('Login failed.' + error.message)
+      error: (error) => {
+        if (error.status === 401) {
+          alert('Login failed: Invalid username or password.');
+        } else {
+          alert('Login failed: ' + (error.error || 'Unknown error'));
+        }
+      }
     });
   }
 }

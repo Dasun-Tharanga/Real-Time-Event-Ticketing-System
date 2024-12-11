@@ -12,17 +12,17 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   register(user: any): Observable<any> {
-    return this.http.post(`${this.apiUrl}/register`, user);
+    return this.http.post(`${this.apiUrl}/register`, user, { observe: 'response', responseType: 'text' });
   }
 
-  login(username: string, password: string) {
+  login(username: string, password: string): Observable<any> {
     const params = new HttpParams().set('username', username).set('password', password);
-    return this.http.post(`${this.apiUrl}/login`, params);
+    return this.http.post(`${this.apiUrl}/login`, {}, { params, observe: 'response', responseType: 'text' });
   }
 
-  adminLogin(username: string, password: string) {
+  adminLogin(username: string, password: string): Observable<any> {
     const params = new HttpParams().set('username', username).set('password', password);
-    return this.http.post(`http://localhost:8181/adminAuthentication/login`, params);
+    return this.http.post(`http://localhost:8181/adminAuthentication/login`, {}, { params });
   }
 
 
