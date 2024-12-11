@@ -18,8 +18,11 @@ public class WebSocketController implements WebSocketConfigurer {
         this.ticketWebSocketHandler = ticketWebSocketHandler;
     }
 
+    // Registers the Websocket handler to handle WebSocket connections
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-        registry.addHandler(ticketWebSocketHandler, "/ws/tickets").setAllowedOrigins("*");
+        registry.addHandler(ticketWebSocketHandler, "/ws/tickets")
+                .setAllowedOrigins("*");// Allow connections from all origins (CORS)
+
     }
 
 
