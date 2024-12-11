@@ -19,6 +19,7 @@ public class WebSocketController implements WebSocketConfigurer {
     }
 
     // Registers the Websocket handler to handle WebSocket connections
+    @Override
     public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
         registry.addHandler(ticketWebSocketHandler, "/ws/tickets")
                 .setAllowedOrigins("*");// Allow connections from all origins (CORS)

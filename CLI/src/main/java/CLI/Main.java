@@ -32,7 +32,7 @@ public class Main {
         }
 
         while (true) {
-            System.out.print("Enter the Ticket Release Rate: ");
+            System.out.print("Enter the Ticket Release Rate(Number of tickets released per minute): ");
             try {
                 ticketReleaseRate = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException e) {
@@ -48,7 +48,7 @@ public class Main {
 
         while (true) {
 
-            System.out.print("Enter the Customer Retrieval Rate: ");
+            System.out.print("Enter the Customer Retrieval Rate(Number of tickets the user can purchase per second): ");
             try {
                 customerRetrievalRate = Integer.parseInt(sc.nextLine());
             } catch (NumberFormatException e) {
