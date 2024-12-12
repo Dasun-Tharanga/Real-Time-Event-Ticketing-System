@@ -31,10 +31,9 @@ Before running the application, ensure the following tools are installed:
 ## Setup Instructions
 
 ### Backend Setup (Spring Boot Application)
-1. **Clone the Repository**:
+1. **Navigate to the Backend Directory**:
    ```bash
-   git clone https://github.com/your-repo-name.git
-   cd CLIENT_extracted
+   cd Server
    ```
 
 2. **Build the Backend Project**:
