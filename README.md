@@ -58,7 +58,7 @@ Before running the application, ensure the following tools are installed:
    ```bash
    mvn spring-boot:run
    ```
-   The backend will start on **http://localhost:8080**.
+   The backend will start on **http://localhost:8181**.
 
 ### Frontend Setup (Angular Application)
 1. **Navigate to the Frontend Directory**:
