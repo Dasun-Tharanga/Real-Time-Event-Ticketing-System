@@ -11,6 +11,7 @@ import org.springframework.web.socket.WebSocketSession;
 
 import java.io.IOException;
 import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 @Component
@@ -123,5 +124,6 @@ public class TicketWebSocketHandler implements org.springframework.web.socket.We
             }
         }
     }
+
 
 }

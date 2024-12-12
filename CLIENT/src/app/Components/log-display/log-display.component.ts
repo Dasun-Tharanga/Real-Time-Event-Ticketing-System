@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LogService } from '../../Services/log/log.service';
+import { signal, computed } from '@angular/core';
+import { WebsocketService } from '../../Services/websocket/websocket.service';
 
 @Component({
   selector: 'app-log-display',
@@ -9,22 +10,27 @@ import { LogService } from '../../Services/log/log.service';
   styleUrl: './log-display.component.css'
 })
 export class LogDisplayComponent implements OnInit {
-  logs!: () => { timestamp: string, message: string }[];
+  // Computed property to safely access log values
+  logs = signal<{ timestamp: string; message: string }[]>([]);
+  displayLogs = computed(() => this.logs());
 
-
-  constructor(private logService: LogService) { }
+  constructor(private websocketService: WebsocketService) { }
 
   ngOnInit(): void {
-    // Readonly signalfrom the LogService
-    this.logs = this.logService.logs;
+    // Connect to WebSocket when component initializes
+    this.websocketService.connect('ws://localhost:8181/ws/tickets');
+
   }
 
   addSampleLog() {
-    this.logService.addLog("hi");
+    // Placeholder method - you'll need to implement this in the WebsocketService
+    // This might involve sending a log message through the WebSocket or using a mock method
+    this.websocketService.addLog('hellooo')
   }
 
   clearAllLogs() {
-    this.logService.clearLogs();
+    // Update the signal to an empty array
+    this.websocketService.clearLogs();
+    this.logs.set([]);
   }
-
 }

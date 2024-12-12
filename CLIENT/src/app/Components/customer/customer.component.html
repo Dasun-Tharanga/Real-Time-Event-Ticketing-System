@@ -1,29 +1,32 @@
+<app-ticket-display></app-ticket-display>
 
-<mat-tab-group>
-    <mat-tab  label="Buy Tickets">
-        <div class="container ticket-adding-container">
-            <div class="container d-flex align-items-center justify-content-center">
+<div class="container ticket-adding-container background">
+    <div class="container d-flex align-items-center justify-content-center">
 
-                <button class="btn btn-info incrementors" (click)="decrement()"><svg class="increment-icon" id="decrement"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></button>
-                
-                <div>
-                    <input type="number" class="form-control fs-3 " id="ticketCount" [value]="ticketCout">
-                </div>
-
-                <button class="btn btn-info incrementors" (click)="increment()"><svg class="increment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg></button>
-                
-                
-            </div>
-            <div class="container-sm add-btn-container">
-                <button class="btn btn-info buy-btn" (click)="buyTickets()">Buy Tickets</button>
-            </div>
-            
+        <button class="btn btn-info incrementors" (click)="decrement()"><svg class="increment-icon" id="decrement"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/></svg></button>
+        
+        <div>
+            <input type="number" class="form-control fs-3 " id="ticketCount" [value]="ticketCout">
         </div>
 
+        <button class="btn btn-info incrementors" (click)="increment()"><svg class="increment-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg></button>
+        
+        
+    </div>
+    <div class="container-sm add-btn-container">
+        <button class="btn btn-info buy-btn" (click)="buyTickets()">Buy Tickets</button>
+    </div>
+    
+</div>
 
-    </mat-tab>
+<!-- <mat-tab-group>
+    <mat-tab  label="Buy Tickets" >
+        
 
-    <mat-tab label="My Tickets">
+
+    </mat-tab> -->
+
+    <!-- <mat-tab label="My Tickets">
         <table class="table">
             <thead>
                 <tr>
@@ -38,7 +41,7 @@
                 </tr>
             </tbody>
         </table>
-    </mat-tab>
+    </mat-tab> -->
 
 
     <!-- <mat-tab label="Profile">
@@ -83,6 +86,6 @@
 
 
     </mat-tab> -->
-</mat-tab-group>
+<!-- </mat-tab-group> -->
 
 

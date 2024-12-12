@@ -6,8 +6,22 @@
   <component name="ChangeListManager">
     <list default="true" id="92771bde-7637-421e-8996-10ec47022568" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CLI/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CLI/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/configuration-form/configuration-form.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/configuration-form/configuration-form.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/configuration-form/configuration-form.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/configuration-form/configuration-form.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Services/websocket/websocket.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Services/websocket/websocket.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Config/TicketWebSocketHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Config/TicketWebSocketHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/WebSocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/configController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/configController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +84,7 @@
       <updated>1733858071055</updated>
       <workItem from="1733858072193" duration="2871000" />
       <workItem from="1733879643705" duration="592000" />
-      <workItem from="1733919819115" duration="4332000" />
+      <workItem from="1733919819115" duration="4979000" />
     </task>
     <servers />
   </component>

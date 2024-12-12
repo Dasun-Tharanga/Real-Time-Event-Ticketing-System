@@ -1,23 +1,47 @@
-<form class="container" (submit)="submitForm(); $event.preventDefault();" >
-    <div class="mb-3">
-        <label for="totalTickets" class="form-label">Total Number of Tickets</label>
-        <input type="number" class="form-control" [(ngModel)]="formData.totalTickets" id="totalTickets" name="totalTickets">
-    </div>
 
-    <div class="mb-3">
-        <label for="ticketReleaseRate" class="form-label">Ticket Release Rate</label>
-        <input type="number" class="form-control" [(ngModel)]="formData.ticketReleaseRate"   id="ticketReleaseRate" name="ticketReleaseRate">
-   
-    </div>
 
-    <div class="mb-3">
-        <label for="customerRetrievalRate" class="form-label">Customer Retrieval Rate</label>
-        <input type="number" class="form-control" [(ngModel)]="formData.customerRetrievalRate" id="customerRetrievalRate" name="customerRetrievalRate">
-    </div>
+<section class="vh-100 ">
+    <div class="container h-100 ">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black sign-in-card background ">
+                    <div class="card-body p-md-5  ">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-    <div class="mb-3">
-        <label for="maximumTickets" class="form-label">Maximum Ticket Capacity</label>
-        <input type="number" class="form-control" [(ngModel)]="formData.maximumTickets" id="maximumTickets" name="maximumTickets">
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Config Form</p>
+
+                                <form class="container" (submit)="submitForm(); $event.preventDefault();" >
+                                    <div class="mb-3">
+                                        <label for="totalTickets" class="form-label">Total Number of Tickets</label>
+                                        <input type="number" class="form-control" [(ngModel)]="formData.totalTickets" id="totalTickets" name="totalTickets">
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="ticketReleaseRate" class="form-label">Ticket Release Rate</label>
+                                        <input type="number" class="form-control" [(ngModel)]="formData.ticketReleaseRate"   id="ticketReleaseRate" name="ticketReleaseRate">
+                                   
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="customerRetrievalRate" class="form-label">Customer Retrieval Rate</label>
+                                        <input type="number" class="form-control" [(ngModel)]="formData.customerRetrievalRate" id="customerRetrievalRate" name="customerRetrievalRate">
+                                    </div>
+                                
+                                    <div class="mb-3">
+                                        <label for="maximumTickets" class="form-label">Maximum Ticket Capacity</label>
+                                        <input type="number" class="form-control" [(ngModel)]="formData.maximumTickets" id="maximumTickets" name="maximumTickets">
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+
+                              
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</section>

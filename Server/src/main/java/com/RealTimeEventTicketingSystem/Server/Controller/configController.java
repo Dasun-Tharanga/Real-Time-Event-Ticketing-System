@@ -18,13 +18,12 @@ public class configController {
 
     Logger logger = Logger.getLogger(TicketWebSocketHandler.class.getName());
 
-    @Autowired
     private ConfigService configService;
 
-//    @Autowired
-//    public configController(ConfigService configService) {
-//        this.configService = configService;
-//    }
+    @Autowired
+    public configController(ConfigService configService) {
+        this.configService = configService;
+    }
 
     /**
      * Endpoint to save configuration data received from the client.
