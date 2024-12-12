@@ -19,10 +19,11 @@ Before running the application, ensure the following tools are installed:
 
 - **Java Development Kit (JDK)**: Version 17 or later.
 - **Maven**: Version 3.8.0 or later.
+- **SpringBoot**: Version 
 - **Node.js and npm**:
   - Node.js: Version 14.x or later.
   - npm: Version 6.x or later.
-- **MongoDB**: Running locally on `localhost:27017`.
+- **MongoDB**: Running on cloud or locally on `localhost:27017`.
 - **Web Browser**: Google Chrome or Firefox recommended.
 
 ---
@@ -44,11 +45,17 @@ Before running the application, ensure the following tools are installed:
 
 3. **Configure MongoDB Connection**:
    Update `application.properties` with your MongoDB settings (if required):
+   Local MongoDB repository:
    ```properties
    spring.data.mongodb.uri=mongodb://localhost:27017/ticketing-system
    ```
+   Cloud MongoDB repository:
+   ```properties
+   spring.data.mongodb.uri=mongodb+srv://<your-username>:<your-password>@<cluster-name>.mongodb.net/<your-database>?retryWrites=true&w=majority
 
-4. **Run the Backend Server**:
+   ```
+
+5. **Run the Backend Server**:
    ```bash
    mvn spring-boot:run
    ```
@@ -57,7 +64,7 @@ Before running the application, ensure the following tools are installed:
 ### Frontend Setup (Angular Application)
 1. **Navigate to the Frontend Directory**:
    ```bash
-   cd frontend
+   cd CLIENT
    ```
 
 2. **Install Frontend Dependencies**:
@@ -76,7 +83,7 @@ Before running the application, ensure the following tools are installed:
 ## Usage Instructions
 
 ### Starting the System
-- **Backend**: Ensure the Spring Boot server is running on port `8080`.
+- **Backend**: Ensure the Spring Boot server is running on port `8181`.
 - **Frontend**: Ensure the Angular app is running on port `4200`.
 
 ### Access the Application
@@ -104,49 +111,6 @@ http://localhost:4200
    http://localhost:8080/swagger-ui.html
    ```
 
----
-
-## Directory Structure
-```
-CLIENT_extracted/
-   ├── src/
-   │   ├── main/
-   │   │   ├── java/
-   │   │   │   └── com/example/ticketing/
-   │   │   │       ├── controllers/       # REST Controllers
-   │   │   │       ├── services/          # Service Layer
-   │   │   │       └── models/            # Data Models
-   │   │   └── resources/
-   │   │       ├── application.properties # Application Configurations
-   │   │       └── static/                # Static Resources
-   ├── pom.xml                            # Maven Configuration File
-   ├── README.md                          # Project Documentation
-   └── frontend/
-       ├── package.json                   # Frontend Dependencies
-       ├── angular.json                   # Angular Project Configurations
-       └── src/app/                       # Angular Source Code
-```
-
----
-
-## Contributing
-We welcome contributions! Follow these steps:
-1. **Fork the Repository**.
-2. **Create a Feature Branch**:
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. **Commit Your Changes**.
-4. **Push to Your Branch**:
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. **Submit a Pull Request**.
-
----
-
-## License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ---
 
