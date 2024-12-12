@@ -6,12 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="92771bde-7637-421e-8996-10ec47022568" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/customer/customer.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/log-display/log-display.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/Components/vendor/vendor.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../CLIENT/src/app/sign-in/sign-in.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/TicketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/WebSocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Controller/WebSocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Diagram/Sequence diagram -  Ticket purchasing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Diagram/Sequence diagram - Ticket Releasing.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Model/Vendor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/main/java/com/RealTimeEventTicketingSystem/Server/Model/Vendor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
