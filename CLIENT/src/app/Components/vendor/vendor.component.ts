@@ -27,14 +27,16 @@ export class VendorComponent {
   }
 
   addTickets(): void {
-    alert(`added ${this.ticketCout}`);
 
     if (this.ticketCout > 0) {
       this.ticketService.addTickets(this.ticketCout, this.vendorID)
         .subscribe({
-          next: (response) => {
-            alert(response); this.ticketCout = 0;
-            this.logService.addLog(`Vendor ${this.vendorID} added ${this.ticketCout} tickets to the TicketPool`);
+          next: (response: any) => {
+            if (response.status === 200) {
+              console.log(response.body);
+              this.ticketCout = 0;
+              this.logService.addLog(`Vendor ${this.vendorID} added ${this.ticketCout} tickets to the TicketPool`);
+            }
           },
           error: (error) => { alert('Failed to add tickets. Please try again.'); console.log(error); }
         })

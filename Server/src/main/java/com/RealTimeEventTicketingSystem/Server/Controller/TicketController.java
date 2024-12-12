@@ -5,8 +5,12 @@ import com.RealTimeEventTicketingSystem.Server.Service.CustomerService;
 import com.RealTimeEventTicketingSystem.Server.Service.TicketService;
 import com.RealTimeEventTicketingSystem.Server.Service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.logging.Logger;
 
 @RestController
@@ -34,12 +38,21 @@ public class TicketController {
      * @param vendorID    the vendor's ID responsible for adding tickets.
      */
     @PostMapping("/add")
-    public void addTicket(@RequestParam int ticketCount, @RequestParam String vendorID) {
+    public ResponseEntity<Map<String,String>> addTicket(@RequestParam int ticketCount, @RequestParam String vendorID) {
         try {
             vendorService.releaseTickets(vendorID, ticketCount);
             logger.info("Vendor " + vendorID + " is releasing " + ticketCount + " tickets.");
+
+            // Create a response body
+            Map<String, String> responseBody = new HashMap<>();
+            responseBody.put("message", "Adding Tickets");
+
+            // Return the response entity with JSON body
+            return ResponseEntity.ok(responseBody);
+
         }catch (Exception e) {
             logger.severe("Error while adding tickets: " + e.getMessage());
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 
@@ -50,12 +63,20 @@ public class TicketController {
      * @param ticketCount the number of tickets to be purchased.
      */
     @PostMapping("/purchase")
-    public void purchaseTicket(@RequestParam String customerID, @RequestParam int ticketCount) {
+    public ResponseEntity<Map<String, String>> purchaseTicket(@RequestParam String customerID, @RequestParam int ticketCount) {
         try {
             customerService.purchaseTickets(customerID, ticketCount);
             logger.info("Customer " + customerID + " is attempting to purchase " + ticketCount + " tickets.");
+            // Create a response body
+            Map<String, String> responseBody = new HashMap<>();
+            responseBody.put("message", "Purchasing Tickets");
+
+            // Return the response entity with JSON body
+            return ResponseEntity.ok(responseBody);
+
         } catch (Exception e) {
             logger.severe("Error while purchasing tickets: " + e.getMessage());
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
     }
 

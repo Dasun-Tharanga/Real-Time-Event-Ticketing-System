@@ -20,8 +20,9 @@ export class SignInComponent {
     this.authService.login(this.credentials.username, this.credentials.password).subscribe({
       next: (response: any) => {
         if (response.status === 200) {
-          alert(response.body);
-          this.logService.addLog("logged in");
+          //alert(response.body);
+          console.log(response.body);
+
           this.router.navigate(['/customer']);
 
         }

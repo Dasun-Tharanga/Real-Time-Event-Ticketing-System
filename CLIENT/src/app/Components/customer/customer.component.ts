@@ -28,12 +28,14 @@ export class CustomerComponent {
   }
 
   buyTickets(): void {
-    alert(`purchased ${this.ticketCout}`);
 
     if (this.ticketCout > 0) {
       this.ticketService.buyTickets(this.ticketCout, this.customerId)
         .subscribe({
-          next: (response) => { alert(response); this.ticketCout = 0 },
+          next: (response: string) => {
+            console.log(response);
+            this.ticketCout = 0
+          },
           error: (error) => { alert('Failed to buy tickets. Please try again.'); console.log(error); }
         })
     } else {

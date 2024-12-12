@@ -18,7 +18,7 @@ export class AdminSingInComponent {
   login(): void {
     this.authService.adminLogin(this.credentials.username, this.credentials.password).subscribe({
       next: (response) => {
-        alert(response);
+        //alert(response);
         if (response) { this.router.navigate(['/vendor']) }
       },
       error: (error) => alert('Login failed.' + error.message)
