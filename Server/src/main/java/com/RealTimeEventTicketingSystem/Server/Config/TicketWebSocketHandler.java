@@ -114,13 +114,25 @@ public class TicketWebSocketHandler implements org.springframework.web.socket.We
      */
     public void broadcastTicketCount(int ticketCount) {
 
-        TextMessage textMessage = new TextMessage(String.valueOf(ticketCount)); // Creating the message with  ticketCount
+        TextMessage textMessage = new TextMessage("{\"type\": \"ticketCount\", \"count\": " + ticketCount + "}"); // Creating the message with  ticketCount
         for (WebSocketSession session : sessions ) {
             try {
                 session.sendMessage(textMessage);// Sending the message to each active session
 
             } catch (IOException e) {
                 logger.warning("Error sending ticket count to session " + session.getId() + ": " + e.getMessage());
+            }
+        }
+    }
+
+    public void broadcastLogRecord(String logRecord){
+
+        for(WebSocketSession session : sessions){
+            try {
+                session.sendMessage(new TextMessage("{\"type\": \"log\", \"message\": \"" + logRecord + "\"}"));
+                System.out.println("Log record sent to session " + session.getId());
+            } catch (IOException e) {
+                logger.warning("Error sending log record to session " + session.getId() + ": " + e.getMessage());
             }
         }
     }

@@ -1,4 +1,4 @@
-<!-- 
+
   <section class="vh-100 ">
     <div class="container h-100 ">
         <div class="row d-flex justify-content-center align-items-center h-100">
@@ -10,13 +10,15 @@
 
                                 <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Logs</p>
 
-                                <div *ngFor="let log of displayLogs()">
-                                  <strong>{{ log.timestamp }}</strong>: {{ log.message }}
-                                </div>
-                                <div class="">
+                                <ul>
+                                    <li *ngFor="let log of Logs">{{log}}</li>
+                                    <li>{{Log()}}</li>
+                                </ul>
+
+                                <!-- <div class="">
                                   <button class="btn btn-info me-5" (click)="addSampleLog()">Add Log</button >
                                   <button class="btn btn-info" (click)="clearAllLogs()">Clear Logs</button>
-                                </div>
+                                </div> -->
 
                               
 
@@ -27,4 +29,4 @@
             </div>
         </div>
     </div>
-</section> -->
+</section>

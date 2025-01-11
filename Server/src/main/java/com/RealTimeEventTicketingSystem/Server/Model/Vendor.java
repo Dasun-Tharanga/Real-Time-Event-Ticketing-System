@@ -42,7 +42,7 @@ public class Vendor implements Runnable {
                     ticketsReleased += ticketsToReleaseNow;
 
                     // Simulate the time delay of the vendor releasing tickets (1 minute between releases)
-                    Thread.sleep(60000);
+                    Thread.sleep(1000);
                     // In this block of code, in each second the vendor adds "ticketReleaseRate" number of tickets to the pool.
 
                 }else break;// If the ticket addition fails (e.g., no space left), break out of the loop

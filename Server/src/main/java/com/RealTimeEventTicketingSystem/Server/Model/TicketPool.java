@@ -9,6 +9,7 @@ import org.springframework.stereotype.Component;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.LogRecord;
 import java.util.logging.Logger;
 
 @Component
@@ -51,6 +52,7 @@ public class TicketPool {
 
         // Log success and return
         logger.info(ticketCount + " tickets added to the ticket pool.");
+        ticketWebSocketHandler.broadcastLogRecord("first log message");
         return true;
     }
 
